@@ -1,0 +1,71 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 30/05/2025 às 19:52
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `aviacao`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `acidentes`
+--
+
+CREATE TABLE `acidentes` (
+  `relatorio` varchar(50) DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  `qualificacao_piloto` tinyint(4) DEFAULT NULL,
+  `fadiga_piloto` tinyint(4) DEFAULT NULL,
+  `certificado_aeronave` tinyint(4) DEFAULT NULL,
+  `decolagem` tinyint(4) DEFAULT NULL,
+  `aproximacao_final` tinyint(4) DEFAULT NULL,
+  `condicoes_meteorologicas` tinyint(4) DEFAULT NULL,
+  `planejamento_voo` tinyint(4) DEFAULT NULL,
+  `problemas_mecanicos` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `acidentes`
+--
+
+INSERT INTO `acidentes` (`relatorio`, `data`, `qualificacao_piloto`, `fadiga_piloto`, `certificado_aeronave`, `decolagem`, `aproximacao_final`, `condicoes_meteorologicas`, `planejamento_voo`, `problemas_mecanicos`) VALUES
+('A-033/CENIPA/2022', '2022-03-16', 0, 1, 0, 0, 1, 0, 1, 0),
+('A-034/CENIPA/2022', '2022-03-16', 0, 0, 0, 1, 1, 0, 1, 1),
+('A-035/CENIPA/2022', '2022-03-19', 0, 0, 0, 1, 0, 1, 1, 0),
+('A-036/CENIPA/2022', '2022-03-21', 0, 0, 1, 0, 0, 0, 0, 1),
+('A-037/CENIPA/2022', '2022-03-23', 0, 1, 1, 0, 1, 1, 0, 1),
+('A-038/CENIPA/2022', '2022-03-24', 1, 1, 0, 0, 1, 0, 1, 0),
+('A-039/CENIPA/2022', '2022-03-27', 0, 0, 0, 1, 0, 0, 0, 1),
+('A-040/CENIPA/2022', '2022-03-31', 0, 1, 0, 0, 0, 1, 1, 0),
+('A-124/CENIPA/2022', '2022-04-05', 0, 1, 0, 0, 1, 0, 0, 1),
+('A-042/CENIPA/2022', '2022-04-06', 0, 0, 0, 0, 1, 1, 0, 1),
+('A-043/CENIPA/2022', '2022-04-06', 0, 1, 0, 1, 1, 1, 1, 0),
+('A-044/CENIPA/2022', '2022-04-11', 1, 1, 0, 1, 0, 0, 0, 0),
+('A-046/CENIPA/2022', '2022-04-14', 0, 1, 0, 0, 0, 1, 1, 0),
+('IG-047/CENIPA/2022', '2022-04-14', 1, 0, 0, 0, 1, 0, 0, 0),
+('IG-048/CENIPA/2022', '2022-04-15', 1, 1, 0, 0, 0, 0, 1, 0),
+('A-049/CENIPA/2022', '2022-04-17', 0, 1, 0, 0, 1, 0, 0, 1),
+('A-050/CENIPA/2022', '2022-04-17', 0, 1, 0, 1, 0, 1, 1, 1),
+('IG-051/CENIPA/2022', '2022-04-18', 0, 0, 1, 0, 1, 1, 0, 1),
+('IG-053/CENIPA/2022', '2022-04-19', 0, 1, 1, 0, 0, 0, 0, 1);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
